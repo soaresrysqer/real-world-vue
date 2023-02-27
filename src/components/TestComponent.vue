@@ -1,13 +1,9 @@
 <template>
-  <div>Test component</div>
+  <div>Test component test 2</div>
 </template>
 
 <script>
-export default {
-
-}
+export default {}
 </script>
 
-<style>
-
-</style>
+<style></style>
