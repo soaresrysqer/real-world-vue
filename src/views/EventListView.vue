@@ -27,6 +27,7 @@
 import EventCard from '@/components/EventCard.vue'
 import EventService from '@/services/EventService.js'
 import { watchEffect } from 'vue'
+
 export default {
   name: 'EventListView',
   props: ['page'],
@@ -47,8 +48,10 @@ export default {
           this.events = response.data
           this.totalEvents = response.headers['x-total-count']
         })
-        .catch((error) => {
-          console.log(error)
+        .catch(() => {
+          this.$router.push({
+            name: 'NetworkError',
+          })
         })
     })
   },
